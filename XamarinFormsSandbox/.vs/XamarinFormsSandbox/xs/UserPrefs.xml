@@ -1,0 +1,6 @@
+﻿<Properties StartupConfiguration="{A14DF079-672E-4511-B859-751FEF1384A1}|Default">
+  <MonoDevelop.Ide.ItemProperties.XamarinFormsSandbox FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.XamarinFormsSandbox.Android FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.XamarinFormsSandbox.iOS FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+</Properties>

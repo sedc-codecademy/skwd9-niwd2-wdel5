@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IFNGN6eCdRi9XaWDqQyM8zP8HB7Z1qPb9GXyekrwwz5pgSSmwHP7+H9JFSKK2l4D2Po4mjbpylCtvpIkj0+RyQ==",
+  "success": true,
+  "projectFilePath": "/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox.iOS/XamarinFormsSandbox.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/ivandjikovski/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/ivandjikovski/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/ivandjikovski/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

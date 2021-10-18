@@ -1,0 +1,15 @@
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/bin/Debug/netstandard2.0/XamarinFormsSandbox.deps.json
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/bin/Debug/netstandard2.0/XamarinFormsSandbox.dll
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/bin/Debug/netstandard2.0/ref/XamarinFormsSandbox.dll
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/bin/Debug/netstandard2.0/XamarinFormsSandbox.pdb
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.csproj.AssemblyReference.cache
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.AssemblyInfoInputs.cache
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.AssemblyInfo.cs
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.csproj.CoreCompileInputs.cache
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.dll
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/ref/XamarinFormsSandbox.dll
+/Users/ivandjikovski/Desktop/XamarinFormsSEDC/skwd9-niwd2-wdel5/XamarinFormsSandbox/XamarinFormsSandbox/obj/Debug/netstandard2.0/XamarinFormsSandbox.pdb
