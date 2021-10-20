@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xaml="clr-namespace:XamarinFormsSandbox.XAML"
+    x:Class="XamarinFormsSandbox.XAML.MarkupExtensions">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="greenColor">#228822</Color>
+            <Color x:Key="redColor">#882222</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<StackLayout.Resources>
+                <ResourceDictionary>
+                    <Color x:Key="greenColor">#00cc00</Color>
+                </ResourceDictionary>
+            </StackLayout.Resources>-->
+            <Label Text="{Static xaml:MarkupExtensions.StaticText}"/>
+            <Label Text="Home" TextColor="{StaticResource greenColor}"/>
+            <Label Text="Red Label" TextColor="{StaticResource redColor}"/>
+            <Label Text="Green Label" TextColor="{StaticResource greenColor}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

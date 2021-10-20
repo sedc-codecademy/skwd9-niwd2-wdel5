@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsSandbox.XAML.XAMLvsCode">
+    <ContentPage.Content>
+        <!--<Label Text="Hello from Xaml"
+               IsVisible="true"
+               Opacity=".9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Blue"
+               Background="#773333"
+               FontSize="Large"
+               FontAttributes="Bold,Italic"/>-->
+        <StackLayout>
+            <Label Text="Hello from Xaml"
+               IsVisible="true"
+               Opacity=".9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Blue"
+               Background="#773333"
+               FontSize="Large"
+               FontAttributes="Bold,Italic"/>
+
+            <Label Text="Hello from Xaml"
+               IsVisible="true"
+               Opacity=".9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Blue"
+               Background="#773333"
+               FontSize="Large"
+               FontAttributes="Bold,Italic"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

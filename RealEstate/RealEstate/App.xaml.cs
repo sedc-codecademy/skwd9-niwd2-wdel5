@@ -1,9 +1,9 @@
 ﻿using System;
+using RealEstate.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XamarinFormsSandbox.XAML;
 
-namespace XamarinFormsSandbox
+namespace RealEstate
 {
     public partial class App : Application
     {
@@ -11,7 +11,7 @@ namespace XamarinFormsSandbox
         {
             InitializeComponent();
 
-            MainPage = new MarkupExtensions();
+            MainPage = new DetailsPage();
         }
 
         protected override void OnStart()

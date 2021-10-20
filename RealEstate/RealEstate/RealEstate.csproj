@@ -15,9 +15,9 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="XAML\" />
+    <None Remove="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XAML\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RealEstate.Views.RealEstatePage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#006600"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#660000"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#000066"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#006600"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#660000"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#000066"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#006600"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#660000"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="12,6" InputTransparent="True">
+                <Grid ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"
+                            BackgroundColor="#000066"
+                             CornerRadius="40,15,15,40"
+                             HeightRequest="100"
+                             WidthRequest="100"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1"
+                                 VerticalOptions="Center">
+                        <Label Text="Real Eastate Name"/>
+                        <Label Text="Contact Person Name"/>
+                        <Label Text="Location"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

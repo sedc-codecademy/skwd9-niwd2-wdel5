@@ -1,18 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinFormsSandbox.MainPage">
-    <ContentPage.Content>
+             x:Class="RealEstate.MainPage">
+
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="3">
-            <StackLayout>
-                <Label HorizontalTextAlignment="Center" TextColor="White" FontSize="36">
-                    <Label.Text>
-                        Changed Text
-                    </Label.Text>
-                </Label>
-                <Label x:Name="mainLabel" Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-            </StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
@@ -27,5 +20,5 @@
             </Label.FormattedText>
         </Label>
     </StackLayout>
-</ContentPage.Content>
+
 </ContentPage>
