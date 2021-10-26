@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:RealEstate.Components"
     x:Class="RealEstate.Views.DetailsPage">
     <ContentPage.Content>
         <Frame Margin="12,6" InputTransparent="True">
@@ -29,43 +30,31 @@
                         <Label Text="Location"/>
                     </StackLayout>
                 </Grid>
-                <FlexLayout Wrap="Wrap">
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="60"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="50"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="80"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="60"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="50"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="44"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="60"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="60"/>
-                    <BoxView Margin="5"
-                             BackgroundColor="Blue"
-                             HeightRequest="30"
-                             WidthRequest="70"/>
+                <FlexLayout Wrap="Wrap" x:Name="flexLayout">
+                    <components:ChipView Text="One" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Two" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Three" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Four" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="One" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Two" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Three" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Four" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="One" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Two" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Three" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
+                    <components:ChipView Text="Four" Padding="6,3"
+                                         ChipDeleted="ChipView_ChipDeleted"/>
                 </FlexLayout>
                 </StackLayout>
             </Frame>
