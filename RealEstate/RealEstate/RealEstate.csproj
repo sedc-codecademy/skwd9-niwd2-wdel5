@@ -22,10 +22,14 @@
     <None Remove="Newtonsoft.Json" />
     <None Remove="Xamarin.Forms.PancakeView" />
     <None Remove="Components\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Components\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

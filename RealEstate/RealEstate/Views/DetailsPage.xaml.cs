@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using RealEstate.Models;
+using RealEstate.ViewModels;
 using Xamarin.Forms;
 
 namespace RealEstate.Views
 {
     public partial class DetailsPage : ContentPage
     {
-        public DetailsPage()
+        public DetailsPage(Estate estate)
         {
             InitializeComponent();
-        }
-
-        void ChipView_ChipDeleted(object sender, EventArgs e)
-        {
-            flexLayout.Children.Remove((View)sender);
+            BindingContext = new DetailsViewModel(estate);
         }
     }
 }

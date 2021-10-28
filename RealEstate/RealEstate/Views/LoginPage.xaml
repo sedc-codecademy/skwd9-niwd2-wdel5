@@ -20,8 +20,8 @@
                 <Label Text="Username" />
                 <Entry/>
                 <Label Text="Password"/>
-                <Entry/>
-                <Button Text="Login" />
+                <Entry IsPassword="True"/>
+                <Button Text="Login"  Clicked="Button_Clicked"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

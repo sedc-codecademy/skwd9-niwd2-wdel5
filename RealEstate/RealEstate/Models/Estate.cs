@@ -30,5 +30,8 @@ namespace RealEstate.Models
 
         [JsonProperty("photoUrl")]
         public string PhotoUrl { get; set; }
+
+        [JsonProperty("available")]
+        public bool Available { get; set; }
     }
 }

@@ -16,8 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="XAML\" />
+    <None Remove="DataBinding\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="XAML\" />
+    <Folder Include="DataBinding\" />
   </ItemGroup>
 </Project>

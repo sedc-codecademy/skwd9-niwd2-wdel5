@@ -4,18 +4,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:viewmodels="clr-namespace:RealEstate.ViewModels"
+    xmlns:converters="clr-namespace:RealEstate.Converters"
     x:Class="RealEstate.Views.ListPage"
     ios:Page.UseSafeArea="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BoolToColorConverter x:Key="boolToColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <viewmodels:ListViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <CollectionView x:Name="collectionView"
+                            ItemsSource="{Binding EstateCollection}"
                             RemainingItemsThreshold="10"
-                            RemainingItemsThresholdReached="RemainingItemsThresholdReached">
+                            RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
+                            SelectionMode="Single"
+                            SelectionChanged="collectionView_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="12,6">
                             <Frame>
-                                <Grid ColumnSpacing="15">
+                                <Grid ColumnSpacing="15" BackgroundColor="{Binding Available, Converter={StaticResource boolToColorConverter}}">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
