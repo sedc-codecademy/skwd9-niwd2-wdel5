@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:workingwithdata="clr-namespace:XamarinFormsSandbox.WorkingWithData"
+    x:Class="XamarinFormsSandbox.WorkingWithData.RestClientView"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True">
+    <ContentPage.BindingContext>
+        <workingwithdata:RestClientViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="GET" Command="{Binding GetCommand}"/>
+                <Button Text="POST" Command="{Binding PostCommand}"/>
+                <Button Text="PATCH" Command="{Binding PatchCommand}"/>
+                <Button Text="DELETE" Command="{Binding DeleteCommand}"/>
+            </StackLayout>
+            <ScrollView HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                <Label Text="{Binding ResultLabel}"/>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

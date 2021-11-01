@@ -1,5 +1,6 @@
 ﻿using System;
 using RealEstate.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,16 @@ namespace RealEstate
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            var loggedIn = Preferences.Get(PreferencesKeys.IsUserLoggedIn, false);
+
+            if (loggedIn)
+            {
+                MainPage = new NavigationPage(new ListPage());
+            }
+            else
+            {
+                MainPage = new LoginPage();
+            }
         }
 
         protected override void OnStart()

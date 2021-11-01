@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace RealEstate.Views
@@ -14,6 +13,7 @@ namespace RealEstate.Views
 
         void Button_Clicked(object sender, EventArgs e)
         {
+            Preferences.Set(PreferencesKeys.IsUserLoggedIn, true);
             Application.Current.MainPage = new NavigationPage(new ListPage());
         }
     }

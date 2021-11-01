@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinFormsSandbox.DataBinding;
+using XamarinFormsSandbox.WorkingWithData;
 using XamarinFormsSandbox.XAML;
 
 namespace XamarinFormsSandbox
@@ -12,7 +13,7 @@ namespace XamarinFormsSandbox
         {
             InitializeComponent();
 
-            MainPage = new MyPage();
+            MainPage = new RestClientView();
         }
 
         protected override void OnStart()

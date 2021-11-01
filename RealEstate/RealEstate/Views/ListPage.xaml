@@ -7,7 +7,8 @@
     xmlns:viewmodels="clr-namespace:RealEstate.ViewModels"
     xmlns:converters="clr-namespace:RealEstate.Converters"
     x:Class="RealEstate.Views.ListPage"
-    ios:Page.UseSafeArea="True">
+    ios:Page.UseSafeArea="True"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:BoolToColorConverter x:Key="boolToColorConverter"/>
@@ -18,17 +19,23 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView x:Name="collectionView"
+
+            <!--<CollectionView x:Name="collectionView"
                             ItemsSource="{Binding EstateCollection}"
                             RemainingItemsThreshold="10"
                             RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
+                            SelectionMode="Single"
+                            SelectionChanged="collectionView_SelectionChanged">-->
+
+            <CollectionView x:Name="collectionView"
+                            ItemsSource="{Binding EstateCollection}"
                             SelectionMode="Single"
                             SelectionChanged="collectionView_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="12,6">
-                            <Frame>
-                                <Grid ColumnSpacing="15" BackgroundColor="{Binding Available, Converter={StaticResource boolToColorConverter}}">
+                            <Frame BackgroundColor="{Binding Available, Converter={StaticResource boolToColorConverter}}">
+                                <Grid ColumnSpacing="15">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
