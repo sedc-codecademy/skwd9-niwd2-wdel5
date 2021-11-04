@@ -2,7 +2,11 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:RealEstate.ViewModels"
     x:Class="RealEstate.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -21,7 +25,8 @@
                 <Entry/>
                 <Label Text="Password"/>
                 <Entry IsPassword="True"/>
-                <Button Text="Login"  Clicked="Button_Clicked"/>
+                <Button Text="Login"
+                        Command="{Binding LoginCommand}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

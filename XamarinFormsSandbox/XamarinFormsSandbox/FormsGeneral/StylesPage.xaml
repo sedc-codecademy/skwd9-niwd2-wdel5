@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsSandbox.FormsGeneral.StylesPage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True">
+    <ContentPage.Resources>
+
+        <Style x:Key="baseStyle" TargetType="Label">
+            <Setter Property="BackgroundColor" Value="Yellow"/>
+        </Style>
+
+        <Style x:Key="myBigLabel" BasedOn="{StaticResource baseStyle}" TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextColor" Value="Gray"/>
+        </Style>
+
+        <Style x:Key="mySmallLabel" BasedOn="{StaticResource baseStyle}" TargetType="Label">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Resources>
+                <Style x:Key="mySmallLabel" BasedOn="{StaticResource baseStyle}" TargetType="Label">
+                    <Setter Property="FontSize" Value="10"/>
+                    <Setter Property="TextColor" Value="Red"/>
+                </Style>
+            </StackLayout.Resources>
+            <StackLayout>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"
+                       Style="{StaticResource myBigLabel}"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"
+                       Style="{StaticResource myBigLabel}"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"
+                       Style="{StaticResource mySmallLabel}"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"
+                       Style="{StaticResource mySmallLabel}"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

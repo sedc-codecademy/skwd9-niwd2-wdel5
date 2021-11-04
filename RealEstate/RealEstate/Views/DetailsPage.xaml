@@ -5,6 +5,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:viewmodels="clr-namespace:RealEstate.ViewModels"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     ios:Page.UseSafeArea="True"
     x:Class="RealEstate.Views.DetailsPage"
     x:DataType="viewmodels:DetailsViewModel">
@@ -39,8 +40,9 @@
                     <Label Text="{Binding Address}"/>
                 </StackLayout>
             </Grid>
-            <StackLayout>
-            </StackLayout>
+            <maps:Map x:Name="myMap"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

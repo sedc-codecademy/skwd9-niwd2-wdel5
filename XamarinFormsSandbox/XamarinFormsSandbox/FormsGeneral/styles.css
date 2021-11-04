@@ -1,0 +1,25 @@
+﻿^contentpage{
+    background-color: black;
+}
+
+label{
+    color: white;
+}
+
+stacklayout{
+    background-color: gray;
+    margin: 30;
+    -xf-spacing: 30;
+}
+
+#myLabel{
+    color: red;
+}
+
+.myClass{
+    font-size: 5;
+}
+
+scrollview > stacklayout{
+    background-color: beige;
+}

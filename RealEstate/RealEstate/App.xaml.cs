@@ -12,16 +12,7 @@ namespace RealEstate
         {
             InitializeComponent();
 
-            var loggedIn = Preferences.Get(PreferencesKeys.IsUserLoggedIn, false);
-
-            if (loggedIn)
-            {
-                MainPage = new NavigationPage(new ListPage());
-            }
-            else
-            {
-                MainPage = new LoginPage();
-            }
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

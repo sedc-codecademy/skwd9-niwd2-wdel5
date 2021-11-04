@@ -67,5 +67,11 @@ namespace RealEstate.ViewModels
 
             EstateCollection = new ObservableCollection<Estate>(estates);
         }
+
+        public ICommand SelectionChangedCommand => new Command(async (arg) =>
+        {
+            var estate = (Estate)arg;
+            await Shell.Current.GoToAsync($"DetailsPage?Id={estate.Id}");
+        });
     }
 }

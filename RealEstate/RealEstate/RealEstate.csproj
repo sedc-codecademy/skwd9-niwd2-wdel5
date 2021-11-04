@@ -15,6 +15,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.5.0.725" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -24,6 +25,7 @@
     <None Remove="Components\" />
     <None Remove="ViewModels\" />
     <None Remove="Converters\" />
+    <None Remove="Xamarin.Forms.Maps" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

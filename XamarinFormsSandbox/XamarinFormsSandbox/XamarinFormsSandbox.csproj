@@ -22,10 +22,12 @@
     <None Remove="WorkingWithData\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Xam.Plugin.Connectivity" />
+    <None Remove="FormsGeneral\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="XAML\" />
     <Folder Include="DataBinding\" />
     <Folder Include="WorkingWithData\" />
+    <Folder Include="FormsGeneral\" />
   </ItemGroup>
 </Project>

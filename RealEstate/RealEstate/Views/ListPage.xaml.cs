@@ -10,17 +10,5 @@ namespace RealEstate.Views
         {
             InitializeComponent();
         }
-
-        void collectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Estate estate = e.CurrentSelection.FirstOrDefault() as Estate;
-
-            if (estate == null)
-                return;
-
-            Navigation.PushAsync(new DetailsPage(estate));
-
-            collectionView.SelectedItem = null;
-        }
     }
 }
