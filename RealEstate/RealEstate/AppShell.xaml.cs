@@ -10,6 +10,7 @@ namespace RealEstate
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
+            Routing.RegisterRoute(nameof(UpsertPage), typeof(UpsertPage));
         }
     }
 }

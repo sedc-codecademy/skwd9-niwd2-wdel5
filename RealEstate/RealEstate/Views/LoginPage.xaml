@@ -22,9 +22,10 @@
                          Padding="20"
                          Grid.Row="1">
                 <Label Text="Username" />
-                <Entry/>
+                <Entry Text="{Binding Username}"/>
                 <Label Text="Password"/>
-                <Entry IsPassword="True"/>
+                <Entry IsPassword="True"
+                       Text="{Binding Password}"/>
                 <Button Text="Login"
                         Command="{Binding LoginCommand}"/>
             </StackLayout>

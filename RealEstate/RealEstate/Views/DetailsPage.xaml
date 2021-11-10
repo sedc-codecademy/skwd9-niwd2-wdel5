@@ -9,6 +9,14 @@
     ios:Page.UseSafeArea="True"
     x:Class="RealEstate.Views.DetailsPage"
     x:DataType="viewmodels:DetailsViewModel">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Create" x:Name="createItem"
+                     Command="{Binding UpsertCommand}"
+                     CommandParameter="{Binding Source={x:Reference createItem}, Path=Text}"/>
+        <ToolbarItem Text="Update" x:Name="updateItem"
+                     Command="{Binding UpsertCommand}"
+                     CommandParameter="{Binding Source={x:Reference updateItem}, Path=Text}"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Margin="12,6">
             <Grid ColumnSpacing="15"

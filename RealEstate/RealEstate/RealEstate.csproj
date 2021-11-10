@@ -16,6 +16,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.5.0.725" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -26,6 +27,8 @@
     <None Remove="ViewModels\" />
     <None Remove="Converters\" />
     <None Remove="Xamarin.Forms.Maps" />
+    <None Remove="Services\" />
+    <None Remove="Xam.Plugin.Connectivity" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -33,5 +36,6 @@
     <Folder Include="Components\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Converters\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

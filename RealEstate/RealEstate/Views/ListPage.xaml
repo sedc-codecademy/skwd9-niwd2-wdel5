@@ -8,6 +8,7 @@
     xmlns:converters="clr-namespace:RealEstate.Converters"
     x:Class="RealEstate.Views.ListPage"
     ios:Page.UseSafeArea="True"
+    x:Name="myPage"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -18,7 +19,7 @@
         <viewmodels:ListViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
 
             <!--<CollectionView x:Name="collectionView"
                             ItemsSource="{Binding EstateCollection}"
@@ -34,48 +35,60 @@
                             SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference collectionView}}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="12,6">
-                            <Frame BackgroundColor="{Binding Available, Converter={StaticResource boolToColorConverter}}">
-                                <Grid ColumnSpacing="15">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="70"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <pancakeview:PancakeView Grid.Column="0"
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="PaleVioletRed"
+                                           Command="{Binding BindingContext.DeleteCommand, Source={x:Reference myPage}}"
+                                           CommandParameter="{Binding BindingContext, Source={x:Reference stack}}"/>
+                            </SwipeView.RightItems>
+                            <StackLayout Padding="12,6" x:Name="stack">
+                                <Frame BackgroundColor="{Binding Available, Converter={StaticResource boolToColorConverter}}">
+                                    <Grid ColumnSpacing="15">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <pancakeview:PancakeView Grid.Column="0"
                                        Padding="0"
                                          CornerRadius="30,15,15,30"
                                          HeightRequest="70"
                                          WidthRequest="70"
                                          HorizontalOptions="Center"
                                          VerticalOptions="Center">
-                                        <Image HeightRequest="70"
+                                            <Image HeightRequest="70"
                                            WidthRequest="70"
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center"
                                            Source="{Binding PhotoUrl}"/>
-                                    </pancakeview:PancakeView>
-                                    <StackLayout Grid.Column="1"
+                                        </pancakeview:PancakeView>
+                                        <StackLayout Grid.Column="1"
                                  VerticalOptions="Center">
-                                        <Label Text="{Binding EstateName}"
+                                            <Label Text="{Binding EstateName}"
                                                TextColor="Black"
                                                FontSize="Large"
                                                LineBreakMode="TailTruncation"/>
-                                        <Label Text="{Binding ContactPersonName}"
+                                            <Label Text="{Binding ContactPersonName}"
                                                FontSize="Medium"
                                                LineBreakMode="TailTruncation"/>
-                                        <Label Text="{Binding Address}"
+                                            <Label Text="{Binding Address}"
                                                FontSize="Medium"
                                                LineBreakMode="TailTruncation"/>
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-                        </StackLayout>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </SwipeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+            <ActivityIndicator HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               IsRunning="True"
+                               IsVisible="{Binding IsBusy}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
