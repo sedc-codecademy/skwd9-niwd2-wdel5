@@ -17,6 +17,7 @@
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.5.0.725" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -29,6 +30,8 @@
     <None Remove="Xamarin.Forms.Maps" />
     <None Remove="Services\" />
     <None Remove="Xam.Plugin.Connectivity" />
+    <None Remove="Microsoft.Extensions.Hosting" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -37,5 +40,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Converters\" />
     <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

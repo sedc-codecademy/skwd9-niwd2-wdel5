@@ -7,6 +7,7 @@
     xmlns:viewmodels="clr-namespace:RealEstate.ViewModels"
     xmlns:converters="clr-namespace:RealEstate.Converters"
     x:Class="RealEstate.Views.ListPage"
+    AutomationId="ListPage"
     ios:Page.UseSafeArea="True"
     x:Name="myPage"
     NavigationPage.HasNavigationBar="False">
@@ -15,9 +16,6 @@
             <converters:BoolToColorConverter x:Key="boolToColorConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.BindingContext>
-        <viewmodels:ListViewModel/>
-    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
 

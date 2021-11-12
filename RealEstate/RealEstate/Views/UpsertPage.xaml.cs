@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using RealEstate.Interfaces;
+using RealEstate.ViewModels;
 using Xamarin.Forms;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace RealEstate.Views
 {
@@ -10,6 +12,7 @@ namespace RealEstate.Views
         public UpsertPage()
         {
             InitializeComponent();
+            BindingContext = new UpsertViewModel(Startup.ServiceProvider.GetService<IEstatesServices>());
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Newtonsoft.Json;
+using RealEstate.Interfaces;
+using RealEstate.Models;
 using RealEstate.Services;
 using Xamarin.Forms;
 
@@ -9,7 +12,9 @@ namespace RealEstate.ViewModels
     [QueryProperty(nameof(Id), nameof(Id))]
     public class DetailsViewModel : BaseViewModel
     {
-        private EstatesService _estatesService;
+        private IEstatesServices _estatesService;
+
+        private Estate _estate;
 
         public event Action InitializationFinished;
 
@@ -96,30 +101,30 @@ namespace RealEstate.ViewModels
 
         public ICommand UpsertCommand => new Command((action) =>
         {
-            Shell.Current.GoToAsync($"UpsertPage?Action={action}");
+            Shell.Current.GoToAsync($"UpsertPage?Action={action}&EstateString={JsonConvert.SerializeObject(_estate)}");
         });
 
-        public DetailsViewModel()
+        public DetailsViewModel(IEstatesServices estatesServices)
         {
-            _estatesService = new EstatesService();
+            _estatesService = estatesServices;
         }
 
         private async Task Initialize(long id)
         {
-            var estate = await _estatesService.GetEstate(id);
+            _estate = await _estatesService.GetEstate(id);
 
-            if (estate != null)
+            if (_estate != null)
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    EstateName = estate.EstateName;
-                    ContactPersonName = estate.ContactPersonName;
-                    ContactPersonPhone = estate.ContactPersonPhone;
-                    ContactPersonEmail = estate.ContactPersonEmail;
-                    Address = estate.Address;
-                    PhotoUrl = estate.PhotoUrl;
-                    Lattitude = estate.Latitude;
-                    Longitude = estate.Longitude;
+                    EstateName = _estate.EstateName;
+                    ContactPersonName = _estate.ContactPersonName;
+                    ContactPersonPhone = _estate.ContactPersonPhone;
+                    ContactPersonEmail = _estate.ContactPersonEmail;
+                    Address = _estate.Address;
+                    PhotoUrl = _estate.PhotoUrl;
+                    Lattitude = _estate.Latitude;
+                    Longitude = _estate.Longitude;
 
                     InitializationFinished?.Invoke();
                 });

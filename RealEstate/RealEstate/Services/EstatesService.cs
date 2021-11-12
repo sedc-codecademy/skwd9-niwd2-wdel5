@@ -1,16 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using RealEstate.Interfaces;
 using RealEstate.Models;
 
 namespace RealEstate.Services
 {
-    public class EstatesService
+    public class EstatesService : IEstatesServices
     {
-        private RestClientService _restClinetService;
+        private IRestClientService _restClinetService;
 
-        public EstatesService()
+        public EstatesService(IRestClientService restClientService)
         {
-            _restClinetService = new RestClientService();
+            _restClinetService = restClientService;
         }
 
         public async Task<User> Login(AuthenticateModel authenticateModel)

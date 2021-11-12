@@ -6,8 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
+using RealEstate.Interfaces;
 using RealEstate.Models;
-using RealEstate.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -19,7 +19,7 @@ namespace RealEstate.ViewModels
 
         private readonly int ValidLocalEstateDataInMinutes;
 
-        private EstatesService _estatesService;
+        private IEstatesServices _estatesService;
 
         private bool IsLocalDataValid => DateTime.Now < Preferences.Get(PreferencesKeys.LastEsateUpdateTime,
             default(DateTime)).AddMinutes(ValidLocalEstateDataInMinutes);
@@ -60,11 +60,11 @@ namespace RealEstate.ViewModels
             }
         }
 
-        public ListViewModel()
+        public ListViewModel(IEstatesServices estatesServices)
         {
             //EstateCollection = new ObservableCollection<Estate>(EstateGenerator.Estates.Take(PageSize));
 
-            _estatesService = new EstatesService();
+            _estatesService = estatesServices;
         }
 
         public async Task InitializeAsync()

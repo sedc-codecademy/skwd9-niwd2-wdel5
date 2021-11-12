@@ -2,6 +2,8 @@
 using RealEstate.Models;
 using RealEstate.ViewModels;
 using Xamarin.Forms;
+using Microsoft.Extensions.DependencyInjection;
+using RealEstate.Interfaces;
 
 namespace RealEstate.Views
 {
@@ -10,6 +12,7 @@ namespace RealEstate.Views
         public ListPage()
         {
             InitializeComponent();
+            BindingContext = new ListViewModel(Startup.ServiceProvider.GetService<IEstatesServices>());
         }
 
         protected override async void OnAppearing()

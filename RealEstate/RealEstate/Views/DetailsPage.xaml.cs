@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using RealEstate.Interfaces;
 using RealEstate.Models;
 using RealEstate.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace RealEstate.Views
 {
@@ -14,7 +16,7 @@ namespace RealEstate.Views
         public DetailsPage()
         {
             InitializeComponent();
-            BindingContext = new DetailsViewModel();
+            BindingContext = new DetailsViewModel(Startup.ServiceProvider.GetService<IEstatesServices>());
         }
 
         protected override void OnAppearing()

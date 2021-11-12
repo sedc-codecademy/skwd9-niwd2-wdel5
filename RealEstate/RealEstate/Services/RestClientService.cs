@@ -4,11 +4,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
+using RealEstate.Interfaces;
 using Xamarin.Essentials;
 
 namespace RealEstate.Services
 {
-    public class RestClientService
+    public class RestClientService : IRestClientService
     {
         private readonly Uri BaseUrl = new Uri("http://localhost:5000");
         //private readonly Uri BaseUrl = new Uri("http://10.0.2.2:5000");
@@ -62,6 +63,7 @@ namespace RealEstate.Services
             {
                 var stringContent = new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, "application/json");
 
+                await AddAuthorizationHeader();
                 HttpResponseMessage response = await client.PostAsync(route, stringContent);
 
                 if (response.IsSuccessStatusCode)
@@ -91,6 +93,7 @@ namespace RealEstate.Services
                     Content = stringContent
                 };
 
+                await AddAuthorizationHeader();
                 HttpResponseMessage response = await client.SendAsync(request);
 
                 if (response.IsSuccessStatusCode)
@@ -111,6 +114,7 @@ namespace RealEstate.Services
         {
             if (CrossConnectivity.Current.IsConnected)
             {
+                await AddAuthorizationHeader();
                 HttpResponseMessage response = await client.DeleteAsync(route);
 
                 if (response.IsSuccessStatusCode)

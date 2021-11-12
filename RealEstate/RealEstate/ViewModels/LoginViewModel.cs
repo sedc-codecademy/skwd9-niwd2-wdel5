@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
+using RealEstate.Interfaces;
 using RealEstate.Models;
-using RealEstate.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -9,7 +9,9 @@ namespace RealEstate.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private EstatesService _estatesService;
+        private IEstatesServices _estatesService;
+        private IPlatformService _platformService;
+        private INavigationService _navigationService;
 
         private string _username;
         public string Username
@@ -33,15 +35,19 @@ namespace RealEstate.ViewModels
             }
         }
 
-        public LoginViewModel()
+        public LoginViewModel(IEstatesServices estatesServices,
+            IPlatformService platformService,
+            INavigationService navigationService)
         {
-            if (Preferences.ContainsKey(PreferencesKeys.IsUserLoggedIn)
-                && Preferences.Get(PreferencesKeys.IsUserLoggedIn, false))
-            {
-                Shell.Current.GoToAsync("//ListPage");
-            }
+            _estatesService = estatesServices;
+            _platformService = platformService;
+            _navigationService = navigationService;
 
-            _estatesService = new EstatesService();
+            if (_platformService.PreferencesContainsKey(PreferencesKeys.IsUserLoggedIn)
+                && _platformService.PreferencesGetBool(PreferencesKeys.IsUserLoggedIn, false))
+            {
+                _navigationService.NavigateToAsync("//ListPage");
+            }
         }
 
         public ICommand LoginCommand => new Command(async () =>
@@ -50,11 +56,11 @@ namespace RealEstate.ViewModels
 
             if (user != null)
             {
-                await SecureStorage.SetAsync(PreferencesKeys.UsernameKey, user.Username);
-                await SecureStorage.SetAsync(PreferencesKeys.PasswordKey, Password);
+                await _platformService.SecureSetAsync(PreferencesKeys.UsernameKey, user.Username);
+                await _platformService.SecureSetAsync(PreferencesKeys.PasswordKey, Password);
 
-                Preferences.Set(PreferencesKeys.IsUserLoggedIn, true);
-                await Shell.Current.GoToAsync("//ListPage");
+                _platformService.PreferencesSetBool(PreferencesKeys.IsUserLoggedIn, true);
+                await _navigationService.NavigateToAsync("//ListPage");
             }
         });
     }

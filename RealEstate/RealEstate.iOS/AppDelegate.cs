@@ -24,6 +24,7 @@ namespace RealEstate.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
+            Xamarin.Calabash.Start();
 
             LoadApplication(new App());
 

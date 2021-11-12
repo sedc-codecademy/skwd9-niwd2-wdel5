@@ -6,12 +6,16 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     ios:Page.UseSafeArea="True"
     x:Class="RealEstate.Views.UpsertPage">
-    <ContentPage.BindingContext>
-        <viewmodels:UpsertViewModel/>
-    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{Binding ActionText}"
+                     Command="{Binding UpsertCommand}"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-
+            <Label Text="Estate Name"/>
+            <Entry Text="{Binding EstateName}"/>
+            <Label Text="Contact Person Name"/>
+            <Entry Text="{Binding ContactPersonName}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -3,10 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodels="clr-namespace:RealEstate.ViewModels"
+    AutomationId="LoginPage"
     x:Class="RealEstate.Views.LoginPage">
-    <ContentPage.BindingContext>
-        <viewmodels:LoginViewModel/>
-    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -22,12 +20,15 @@
                          Padding="20"
                          Grid.Row="1">
                 <Label Text="Username" />
-                <Entry Text="{Binding Username}"/>
+                <Entry Text="{Binding Username}"
+                       AutomationId="usernameEntry"/>
                 <Label Text="Password"/>
                 <Entry IsPassword="True"
-                       Text="{Binding Password}"/>
+                       Text="{Binding Password}"
+                       AutomationId="passwordEntry"/>
                 <Button Text="Login"
-                        Command="{Binding LoginCommand}"/>
+                        Command="{Binding LoginCommand}"
+                        AutomationId="loginButton"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
